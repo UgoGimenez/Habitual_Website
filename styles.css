@@ -8,13 +8,13 @@
   --bg-soft: #f1f5f4;
   --text: #1c1d1f;
 
-  /* Legacy palette (used by FAQ/Contact) */
+  /* Legacy palette (FAQ/Contact) */
   --color-dark-green: #004f3e;
   --color-green: #008264;
   --color-light-green: #9be196;
   --color-accent: #21db99;
   --color-earth: #ffe6b9;
-  --color-grey: #d6dfdc; /* harmonized */
+  --color-grey: #d6dfdc;
   --color-text: #333333;
   --color-background: #f5f5f5;
 }
@@ -33,9 +33,7 @@ body {
 a { color: var(--color-accent); text-decoration: none; }
 
 /* ===========================
-   Navbar (supports both markups)
-   - Homepage:  <div class="brand"></div> + <ul class="menu">
-   - Legacy:    <h1> + <ul>
+   Navbar (works with old & new markup)
    =========================== */
 .navbar {
   position: sticky; top: 0; z-index: 40;
@@ -44,32 +42,34 @@ a { color: var(--color-accent); text-decoration: none; }
   background: var(--green); color: #fff;
 }
 .brand, .navbar h1 { font-weight: 700; font-size: 1.5rem; margin: 0; }
-
-/* unify menus */
 .navbar .menu, .navbar ul {
   list-style: none; display: flex; gap: 18px; margin: 0; padding: 0;
 }
-.navbar a { color: #fff; font-weight: 600; text-decoration: none; }
+.navbar a { color: #fff; font-weight: 600; }
 .navbar a:hover { color: var(--color-light-green); }
 
 /* ===========================
-   Homepage hero (non-cropping)
+   Homepage hero
    =========================== */
 .hero-media { position: relative; width: 100%; background: #000; overflow: hidden; }
 .hero-fallback {
-  width: 100%; height: auto; display: block; position: relative; object-fit: contain;
+  width: 100%; height: auto; display: block;
+  position: relative; object-fit: contain;
 }
-
-/* Text strip under hero */
-.hero-strip { background: var(--green); color: #fff; text-align: center; padding: 36px 16px; }
+.hero-strip {
+  background: var(--green); color: #fff; text-align: center;
+  padding: 36px 16px;
+}
 .hero-strip h1 { margin: 0 0 10px; font-size: clamp(22px, 3.2vw, 32px); }
 .hero-strip p  { margin: 0 0 16px; color: #e6fffa; }
 
-/* Buttons (shared) */
+/* Button */
 .btn {
   display: inline-block; background: var(--color-accent); color: #083b2d;
-  padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 700;
+  padding: 10px 16px; border-radius: 6px;
+  text-decoration: none; font-weight: 700;
 }
+.btn:hover { background: var(--color-light-green); }
 
 /* ===========================
    Homepage sections + imagery
@@ -78,7 +78,7 @@ a { color: var(--color-accent); text-decoration: none; }
 .content.light { background: var(--bg-soft); }
 .content h2 { color: var(--green-dark); margin: 0 0 10px; }
 
-.checklist { margin: 12px 0 0 0; padding-left: 18px; }
+.checklist { margin: 12px 0 0; padding-left: 18px; }
 .checklist li { margin: 6px 0; }
 
 .divider { height: 36px; background: var(--green-dark); }
@@ -88,12 +88,13 @@ a { color: var(--color-accent); text-decoration: none; }
 .image-row.two-up { grid-template-columns: repeat(2, 1fr); }
 .image-row img, .big-image {
   width: 100%; height: 100%; object-fit: cover;
-  border-radius: 6px; border: 1px solid var(--color-grey); background: #e6ecea;
+  border-radius: 6px; border: 1px solid var(--color-grey);
+  background: #e6ecea;
 }
 .big-image { height: 460px; margin-top: 16px; }
 
 /* ===========================
-   Carousel (if used)
+   Carousel (optional)
    =========================== */
 .carousel { position: relative; margin: 18px 0; }
 .carousel .viewport { overflow: hidden; width: 100%; }
@@ -104,8 +105,9 @@ a { color: var(--color-accent); text-decoration: none; }
 }
 .carousel .nav {
   position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,.35); color: #fff; border: 0; width: 42px; height: 42px;
-  border-radius: 50%; cursor: pointer; font-size: 22px;
+  background: rgba(0,0,0,.35); color: #fff; border: 0;
+  width: 42px; height: 42px; border-radius: 50%;
+  cursor: pointer; font-size: 22px;
 }
 .carousel .prev { left: 8px; }
 .carousel .next { right: 8px; }
@@ -113,10 +115,13 @@ a { color: var(--color-accent); text-decoration: none; }
 /* ===========================
    Footer
    =========================== */
-.footer { background: var(--green-dark); color: #fff; text-align: center; padding: 24px 16px; margin-top: 24px; }
+.footer {
+  background: var(--green-dark); color: #fff;
+  text-align: center; padding: 24px 16px; margin-top: 24px;
+}
 
 /* ===========================
-   Legacy pages (FAQ / Contact / Mini / Story)
+   Legacy hero (FAQ/Contact pages)
    =========================== */
 .hero {
   padding: 4rem 1.5rem;
@@ -131,7 +136,13 @@ a { color: var(--color-accent); text-decoration: none; }
 }
 .hero .btn:hover { background: var(--color-light-green); }
 
-.section { padding: 2rem 1.5rem; max-width: 1000px; margin: 0 auto; }
+/* ===========================
+   Legacy section
+   =========================== */
+.section {
+  padding: 2rem 1.5rem;
+  max-width: 1000px; margin: 0 auto;
+}
 .section h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--color-dark-green); }
 .section ul { list-style: none; padding: 0; }
 .section ul li { margin-bottom: .5rem; padding-left: 1rem; position: relative; }
@@ -142,21 +153,33 @@ a { color: var(--color-accent); text-decoration: none; }
 
 /* FAQ accordions */
 .section.faq details {
-  margin-bottom: 1rem; background: #fff; border: 1px solid var(--color-grey);
+  margin-bottom: 1rem; background: #fff;
+  border: 1px solid var(--color-grey);
   border-radius: .25rem; padding: 1rem;
 }
-.section.faq summary { font-weight: 600; color: var(--color-dark-green); cursor: pointer; }
+.section.faq summary {
+  font-weight: 600; color: var(--color-dark-green);
+  cursor: pointer;
+}
 
 /* Contact form */
-.contact-form { background: #fff; border: 1px solid var(--color-grey); border-radius: .25rem; padding: 1.5rem; }
-.contact-form label { display: block; margin-bottom: .25rem; font-weight: 500; color: var(--color-dark-green); }
+.contact-form {
+  background: #fff; border: 1px solid var(--color-grey);
+  border-radius: .25rem; padding: 1.5rem;
+}
+.contact-form label {
+  display: block; margin-bottom: .25rem;
+  font-weight: 500; color: var(--color-dark-green);
+}
 .contact-form input, .contact-form textarea {
-  width: 100%; padding: .5rem; margin-bottom: 1rem; border: 1px solid var(--color-grey);
-  border-radius: .25rem; font-family: inherit;
+  width: 100%; padding: .5rem; margin-bottom: 1rem;
+  border: 1px solid var(--color-grey); border-radius: .25rem;
+  font-family: inherit;
 }
 .contact-form button {
-  background: var(--color-accent); color: #fff; padding: .75rem 1.5rem;
-  border: 0; border-radius: .25rem; font-size: 1rem; cursor: pointer;
+  background: var(--color-accent); color: #fff;
+  padding: .75rem 1.5rem; border: 0; border-radius: .25rem;
+  font-size: 1rem; cursor: pointer;
 }
 .contact-form button:hover { background: var(--color-light-green); }
 
@@ -167,9 +190,7 @@ a { color: var(--color-accent); text-decoration: none; }
   .image-row.six-up { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
-  /* hide wide menu on small screens (simple) */
   .navbar .menu, .navbar ul { display: none; }
-
   .image-row.two-up { grid-template-columns: 1fr; }
   .big-image { height: 320px; }
 }
