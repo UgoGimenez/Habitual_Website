@@ -22,30 +22,78 @@
   <section class="section">
     <h2>Contact Us</h2>
     <p>If your organisation needs safe, sustainable sanitation solutions for humanitarian or emergency contexts, we’re here to help.</p>
-    <form class="contact-form" action="hugomgimenez@gmail.com" method="post" enctype="text/plain">
+
+    <!-- Connected to Formspree -->
+    <form id="contact-form"
+          class="contact-form"
+          action="https://formspree.io/f/meozdykz"
+          method="POST">
+      <input type="hidden" name="_subject" value="Habitual website contact">
+
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+      <input id="name" name="name" type="text" autocomplete="name" required>
 
       <label for="organization">Organization</label>
-      <input type="text" id="organization" name="organization">
+      <input id="organization" name="organization" type="text" autocomplete="organization">
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input id="email" name="email" type="email" autocomplete="email" required>
 
       <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone">
+      <input id="phone" name="phone" type="tel" autocomplete="tel">
 
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
+      <!-- Honeypot (spam trap) -->
+      <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
       <button type="submit">Send Message</button>
+      <p id="form-status" style="margin-top:.5rem"></p>
     </form>
 
-    <p>You can also reach us by phone at <strong>+41 78 340 0383</strong> or <strong>+54 351 735 8957</strong>.</p>
+    <noscript>
+      <p><strong>Note:</strong> With JavaScript disabled, you’ll be taken to a confirmation page after submitting.</p>
+    </noscript>
+
+    <p>You can also reach us by phone at <strong>+41 78 340 0383</strong> or <strong>+54 351 735 8957</strong>.</p>
   </section>
 
   <footer class="footer">
     &copy; 2025 Habitual. All rights reserved.
   </footer>
+
+  <script>
+    // Progressive enhancement: keep users on-page with inline messages.
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      if (!window.fetch) return; // fallback: normal POST (redirect) if fetch not available
+      e.preventDefault();
+      statusEl.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          statusEl.textContent = 'Thanks! We will get back to you soon.';
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => null);
+          statusEl.textContent =
+            (data && data.errors)
+              ? data.errors.map(e => e.message).join(', ')
+              : 'Oops, something went wrong. Please try again later.';
+        }
+      } catch {
+        statusEl.textContent = 'Network error. Please check your connection and try again.';
+      }
+    });
+  </script>
 </body>
 </html>
