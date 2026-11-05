@@ -2,450 +2,370 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>habitual – Baño Seco Ecológico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="habitual designs flat-packed, off-grid ecological dry toilets for humanitarian emergencies, disaster zones and remote communities. No plumbing. No electricity.">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>habitual — Dignity, no pipes required</title>
+  <meta name="description" content="habitual designs flat-packed, waterless dry toilets for disaster zones, remote communities and off-grid places. Designed in Argentina, proven from mountain camps to city rooftops.">
+  <meta name="theme-color" content="#0d2a1f">
+  <meta property="og:title" content="habitual — Dignity, no pipes required">
+  <meta property="og:description" content="Flat-packed, waterless dry toilets. No sewer, no water, no electricity. Assembled in under 30 minutes.">
+  <meta property="og:image" content="https://habitual.com.ar/assets/hero-poster.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-poster.jpg">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
 
-  <nav class="navbar">
-    <a href="index.html" class="brand">
-      <span class="brand-name">habitual</span>
-      <span class="brand-tagline">Ba&#241;o Seco Ecol&#243;gico</span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mini.html">Mini Module</a></li>
-      <li><a href="story.html">Story</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-      <li><a href="contact.html" class="btn-nav">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero-media">
-    <img class="hero-img" src="assets/hero-poster.jpg" alt="habitual Mini deployed in the field">
-    <div class="hero-overlay">
-      <p class="hero-tag">Humanitarian Sanitation</p>
-      <h1>Safe Sanitation.<br>Anywhere. In Minutes.</h1>
-      <p class="hero-sub">Ecological dry toilets for disaster zones, refugee camps and remote communities — no plumbing, no electricity, deployable in minutes.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn">Request a Pilot</a>
-        <a href="mini.html" class="btn btn-ghost">See the Product</a>
-      </div>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#top" class="wordmark" aria-label="habitual — home">habitual<span>.</span><small data-i18n="tagline">Baño seco ecológico</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#field" data-i18n="navField">In the field</a>
+      <a href="#models" data-i18n="navModels">Models</a>
+      <a href="#build" data-i18n="navBuild">How it's built</a>
+      <a href="#story" data-i18n="navStory">Story</a>
+      <a href="#faq" data-i18n="navFaq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang" id="langToggle" type="button" aria-label="Cambiar a español"><span data-l="en">EN</span><i>/</i><span data-l="es">ES</span></button>
+      <a href="#contact" class="pill pill-lime header-cta" data-i18n="navContact">Let's talk</a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
     </div>
-  </section>
+  </header>
 
-  <!-- STATS BAR -->
-  <section class="stats-bar">
-    <div class="stat">
-      <span class="stat-number">10+</span>
-      <span class="stat-label">Units deployed</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">3+</span>
-      <span class="stat-label">Years in the field</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">0</span>
-      <span class="stat-label">Infrastructure required</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">&lt;30 min</span>
-      <span class="stat-label">Assembly time</span>
-    </div>
-  </section>
-
-  <!-- PHOTO SLIDESHOW -->
-  <section class="slideshow-section">
-    <div class="slideshow" aria-roledescription="carousel" aria-label="habitual photos">
-      <div class="slideshow-track">
-        <figure class="slide">
-          <img src="assets/hero-poster.jpg" alt="habitual unit deployed among trees and wildflowers" data-lightbox>
-          <figcaption>Deployed in minutes — anywhere</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/field-champaqui-fog.jpg" alt="Two habitual units in the fog at a mountain camp on Cerro Champaquí" loading="lazy" data-lightbox>
-          <figcaption>In the clouds — Cerro Champaquí, Córdoba</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/field-uruguay.jpg" alt="Black-finish habitual unit among trees in Canelones, Uruguay" loading="lazy" data-lightbox>
-          <figcaption>In use in Canelones, Uruguay</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/field-cordoba-night.jpg" alt="habitual unit glowing at dusk on a city rooftop" loading="lazy" data-lightbox>
-          <figcaption>Glowing at dusk — Córdoba city rooftop</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-7.jpg" alt="Person stepping into an open habitual unit" data-lightbox>
-          <figcaption>Simple to use, no training needed</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-13.jpg" alt="habitual unit in a sunny garden among wildflowers" loading="lazy" data-lightbox>
-          <figcaption>Natural wood, fully off-grid</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-9.jpg" alt="Interior with wooden seat and compost box" loading="lazy" data-lightbox>
-          <figcaption>Clean, odourless interior</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-2.jpg" alt="Two people carrying a flat-packed panel" loading="lazy" data-lightbox>
-          <figcaption>Ships flat, carried by hand</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-4.jpg" alt="Assembling a wall panel with a drill" loading="lazy" data-lightbox>
-          <figcaption>Assembled on site in under 30 minutes</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/carousel-12.jpg" alt="habitual unit standing in an open field" loading="lazy" data-lightbox>
-          <figcaption>Works where infrastructure doesn't</figcaption>
-        </figure>
-        <figure class="slide">
-          <img src="assets/hero-portrait.jpg" alt="Man opening the door of a habitual unit" loading="lazy" data-lightbox>
-          <figcaption>Built to last in the field</figcaption>
-        </figure>
-      </div>
-      <button class="slideshow-arrow prev" aria-label="Previous photo">&#8249;</button>
-      <button class="slideshow-arrow next" aria-label="Next photo">&#8250;</button>
-      <span class="slideshow-count">1 / 11</span>
-    </div>
-    <div class="slideshow-dots"><button class="slideshow-dot active" aria-label="Go to photo 1"></button><button class="slideshow-dot" aria-label="Go to photo 2"></button><button class="slideshow-dot" aria-label="Go to photo 3"></button><button class="slideshow-dot" aria-label="Go to photo 4"></button><button class="slideshow-dot" aria-label="Go to photo 5"></button><button class="slideshow-dot" aria-label="Go to photo 6"></button><button class="slideshow-dot" aria-label="Go to photo 7"></button><button class="slideshow-dot" aria-label="Go to photo 8"></button><button class="slideshow-dot" aria-label="Go to photo 9"></button><button class="slideshow-dot" aria-label="Go to photo 10"></button><button class="slideshow-dot" aria-label="Go to photo 11"></button></div>
-    <p class="slideshow-hint">Swipe to see more &middot; tap a photo to view full screen</p>
-  </section>
-
-  <!-- OUT IN THE WORLD -->
-  <section class="content-section">
-    <div class="container">
-      <h2>Out in the World</h2>
-      <p class="section-intro">From mountain camps to city rooftops — habitual units in real use across Argentina and Uruguay.</p>
-      <div class="places">
-        <figure class="place wide">
-          <img src="assets/field-champaqui-camp.jpg" alt="Two habitual units serving a dome camp in the rocky mountains of Cerro Champaquí" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Cerro Champaquí, Córdoba</span><span class="place-note">Serving a remote mountain camp</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-champaqui-fog.jpg" alt="Two habitual units in thick fog at the mountain camp" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Cerro Champaquí, Córdoba</span><span class="place-note">Holding up in mountain weather</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-uruguay.jpg" alt="Black-finish habitual unit among trees" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Canelones, Uruguay</span><span class="place-note">Black finish, out in the bush</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-calamuchita.jpg" alt="habitual Mini next to a wooden cabin on a hillside" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Calamuchita, Córdoba</span><span class="place-note">The Mini at an outdoor event</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-mendiolaza.jpg" alt="habitual unit tucked among trees in a garden" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Mendiolaza, Córdoba</span><span class="place-note">A toilet in the garden for when guests come</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-cordoba-rooftop.jpg" alt="habitual unit door on a rooftop terrace surrounded by city buildings" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Córdoba city</span><span class="place-note">Rooftop installation</span></figcaption>
-        </figure>
-        <figure class="place">
-          <img src="assets/field-cordoba-night.jpg" alt="habitual unit glowing at dusk among city buildings" loading="lazy" data-lightbox>
-          <figcaption><span class="place-name">Nueva Córdoba</span><span class="place-note">Glowing at dusk</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY HABITUAL -->
-  <section class="content-section">
-    <div class="container">
-      <h2>Built for the Hardest Conditions</h2>
-      <p class="section-intro">Traditional sanitation fails when infrastructure does. habitual units work precisely when and where they are needed most.</p>
-      <div class="cards">
-        <div class="card card-photo">
-          <img src="assets/carousel-2.jpg" alt="Carrying a flat-packed panel" loading="lazy" data-lightbox>
-          <div class="card-accent"></div>
-          <h3>Rapid Deployment</h3>
-          <p>Flat-packed and assembles in under 30 minutes. No tools, no machinery, no infrastructure required.</p>
-        </div>
-        <div class="card card-photo">
-          <img src="assets/carousel-12.jpg" alt="Unit standing alone in an open field" loading="lazy" data-lightbox>
-          <div class="card-accent"></div>
-          <h3>Fully Off-Grid</h3>
-          <p>Zero plumbing. Zero electricity. Operates in remote areas, disaster zones and wherever water is scarce.</p>
-        </div>
-        <div class="card card-photo">
-          <img src="assets/carousel-8.jpg" alt="Close-up of the urine-diverting seat" loading="lazy" data-lightbox>
-          <div class="card-accent"></div>
-          <h3>Hygienic &amp; Odorless</h3>
-          <p>Urine-diverting design eliminates odour. Absorbent materials keep the unit clean between uses.</p>
-        </div>
-        <div class="card card-photo">
-          <img src="assets/carousel-13.jpg" alt="Unit surrounded by wildflowers" loading="lazy" data-lightbox>
-          <div class="card-accent"></div>
-          <h3>Eco-Friendly</h3>
-          <p>Waste converts to compost. No leachate, no blackwater, no environmental contamination.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="content-section alt">
-    <div class="container">
-      <h2>Our Products</h2>
-      <p class="section-intro">Two models designed for different needs — both built from natural wood, fully off-grid, and zero infrastructure.</p>
-      <div class="products">
-
-        <div class="product-card">
-          <img src="assets/hero-portrait.jpg" alt="habitual Jardín — full outdoor sanitation structure">
-          <div class="product-card-body">
-            <span class="product-tag">Full Installation</span>
-            <h3>Jard&#237;n</h3>
-            <p>A complete outdoor sanitation structure with interior sink, galvanized roof, and optional solar power. Built for permanent or semi-permanent deployment.</p>
-            <ul class="product-specs">
-              <li>Wood construction with galvanized steel finishes</li>
-              <li>Interior handwash basin and drainage</li>
-              <li>Rear composting access — sealed and hygienic</li>
-              <li>Optional solar lighting and USB charging</li>
-              <li>Built to order, fully customizable</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline">Request Pricing</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/mini-exterior.jpg" alt="habitual Mini — flat-packed portable dry toilet">
-          <div class="product-card-body">
-            <span class="product-tag">Rapid Deployment</span>
-            <h3>Mini</h3>
-            <p>A lightweight, flat-packed dry toilet designed for disaster relief, humanitarian missions and off-grid camps. One person, no tools, under 30 minutes.</p>
-            <ul class="product-specs">
-              <li>Ships flat, assembles without tools</li>
-              <li>Under 20 kg per unit — one person can carry it</li>
-              <li>Available in 4 colors: white, terracotta, green, black</li>
-              <li>Polypropylene arch roof — weatherproof and light</li>
-              <li>Ideal for temporary or rotating deployment</li>
-            </ul>
-            <a href="mini.html" class="btn btn-outline">Full Details</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="content-section">
-    <div class="container">
-      <h2>How It Works</h2>
-      <p class="section-intro">Simple enough for anyone. No training required.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Unpack &amp; Assemble</h3>
-          <p>Ships flat. One person assembles it in under 30 minutes — no tools, no machinery needed.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Use Like a Normal Toilet</h3>
-          <p>The separator keeps solids and liquids apart, eliminating odour without chemicals or flushing.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Compost &amp; Reuse</h3>
-          <p>Solid waste becomes compost over time. Liquid waste can be diluted and used as fertilizer.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROVEN IN THE FIELD -->
-  <section class="content-section alt">
-    <div class="container proof-section">
-      <div class="proof-text">
-        <h2>Proven in the Field</h2>
-        <p>habitual began in Argentina in 2021. By 2024, more than ten units had been sold and remain in active use — built from real-world feedback and hands-on experimentation in the field.</p>
-        <p>Now based in Switzerland, habitual is bringing this proven solution to European humanitarian organizations and NGOs operating globally.</p>
-        <a href="story.html" class="btn btn-outline">Read Our Story</a>
-      </div>
-      <div class="proof-image">
-        <img src="assets/carousel-1.jpg" alt="habitual unit in use">
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="content-section">
-    <div class="container">
-      <h2>In the Field</h2>
-      <p class="section-intro">Natural wood, simple materials and a design shaped by real use. Tap any photo to view it full screen.</p>
-      <div class="gallery gallery-all">
-        <figure class="gallery-item feature">
-          <img src="assets/hero-poster.jpg" alt="habitual unit deployed among trees and wildflowers" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-7.jpg" alt="Person stepping into an open habitual unit" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-13.jpg" alt="habitual unit in a sunny garden among wildflowers" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-9.jpg" alt="Interior with wooden seat and compost box" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-12.jpg" alt="habitual unit in an open field, door closed" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-11.jpg" alt="Arched wooden roof frame against a blue sky" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-10.jpg" alt="Wooden bench with toilet seat and paper holder" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/hero-portrait.jpg" alt="Man opening the door of a habitual unit" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-2.jpg" alt="Two people carrying a flat-packed panel" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-4.jpg" alt="Assembling a wall panel with a drill" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-6.jpg" alt="Fitting the roof onto the frame" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-5.jpg" alt="Two people assembling a unit outdoors" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-3.jpg" alt="Close-up of drilling a wooden panel" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-8.jpg" alt="Close-up of the urine-diverting seat" loading="lazy" data-lightbox>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/carousel-1.jpg" alt="Loading habitual panels onto a pickup truck" loading="lazy" data-lightbox>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section class="cta-band">
-    <h2>Ready to Pilot?</h2>
-    <p>We work with NGOs, humanitarian organizations and governments to design and deliver sanitation pilots in the field.</p>
-    <a href="contact.html" class="btn btn-light">Start a Conversation</a>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="footer-brand-name">habitual</span>
-        <span class="footer-brand-tagline">Ba&#241;o Seco Ecol&#243;gico</span>
-      </div>
-      <nav class="footer-links">
-        <a href="mini.html">Mini Module</a>
-        <a href="story.html">Story</a>
-        <a href="faq.html">FAQs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="footer-copy">&copy; 2025 habitual. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" hidden aria-modal="true" role="dialog" aria-label="Photo viewer">
-    <div class="lightbox-track"></div>
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-arrow prev" aria-label="Previous photo">&#8249;</button>
-    <button class="lightbox-arrow next" aria-label="Next photo">&#8250;</button>
-    <span class="lightbox-count"></span>
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#field"><small>01</small><span data-i18n="navField">In the field</span></a>
+      <a href="#models"><small>02</small><span data-i18n="navModels">Models</span></a>
+      <a href="#build"><small>03</small><span data-i18n="navBuild">How it's built</span></a>
+      <a href="#use"><small>04</small><span data-i18n="navUse">How it works</span></a>
+      <a href="#story"><small>05</small><span data-i18n="navStory">Story</span></a>
+      <a href="#faq"><small>06</small><span data-i18n="navFaq">FAQ</span></a>
+      <a href="#contact"><small>07</small><span data-i18n="navContact">Let's talk</span></a>
+    </nav>
+    <button class="menu-photos" type="button" data-stories="0"><span class="play" aria-hidden="true"></span><span data-i18n="showPhotos">Show the photos</span></button>
   </div>
 
-  <script>
-    // Slideshow
-    (() => {
-      const track = document.querySelector('.slideshow-track');
-      if (!track) return;
-      const slides = [...track.children];
-      const dots = [...document.querySelectorAll('.slideshow-dot')];
-      const count = document.querySelector('.slideshow-count');
-      let current = 0, timer;
-      const go = i => track.scrollTo({ left: track.clientWidth * ((i + slides.length) % slides.length), behavior: 'smooth' });
-      track.addEventListener('scroll', () => {
-        const i = Math.round(track.scrollLeft / track.clientWidth);
-        if (i === current) return;
-        current = i;
-        dots.forEach((d, j) => d.classList.toggle('active', j === i));
-        count.textContent = `${i + 1} / ${slides.length}`;
-      }, { passive: true });
-      dots.forEach((d, i) => d.addEventListener('click', () => { stop(); go(i); }));
-      document.querySelector('.slideshow-arrow.prev').addEventListener('click', () => { stop(); go(current - 1); });
-      document.querySelector('.slideshow-arrow.next').addEventListener('click', () => { stop(); go(current + 1); });
-      // Auto-advance until the visitor interacts
-      const stop = () => clearInterval(timer);
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(current + 1), 5000);
-      ['touchstart', 'pointerdown', 'wheel'].forEach(e => track.addEventListener(e, stop, { passive: true }));
-    })();
+  <main id="top">
 
-    // Full-screen photo viewer
-    (() => {
-      const box = document.querySelector('.lightbox');
-      const track = box.querySelector('.lightbox-track');
-      const count = box.querySelector('.lightbox-count');
-      const srcs = [], alts = {};
-      // Gallery order first, then anything else on the page
-      [...document.querySelectorAll('.gallery-all img[data-lightbox]'), ...document.querySelectorAll('img[data-lightbox]')].forEach(img => {
-        const src = img.getAttribute('src');
-        if (!alts[src]) { srcs.push(src); alts[src] = img.alt; }
-      });
-      srcs.forEach(src => {
-        const fig = document.createElement('figure');
-        fig.className = 'lightbox-slide';
-        const img = document.createElement('img');
-        img.dataset.src = src; img.alt = alts[src];
-        fig.appendChild(img); track.appendChild(fig);
-      });
-      const imgs = [...track.querySelectorAll('img')];
-      let current = 0;
-      const load = i => [i - 1, i, i + 1].forEach(j => { const im = imgs[j]; if (im && !im.src) im.src = im.dataset.src; });
-      const show = (i, smooth) => {
-        current = (i + srcs.length) % srcs.length; load(current);
-        track.scrollTo({ left: track.clientWidth * current, behavior: smooth ? 'smooth' : 'auto' });
-        count.textContent = `${current + 1} / ${srcs.length}`;
-      };
-      const open = src => {
-        box.hidden = false; document.body.style.overflow = 'hidden';
-        requestAnimationFrame(() => show(srcs.indexOf(src), false));
-      };
-      const close = () => { box.hidden = true; document.body.style.overflow = ''; };
-      track.addEventListener('scroll', () => {
-        const i = Math.round(track.scrollLeft / track.clientWidth);
-        if (i !== current) { current = i; load(i); count.textContent = `${i + 1} / ${srcs.length}`; }
-      }, { passive: true });
-      document.querySelectorAll('img[data-lightbox]').forEach(img => {
-        img.addEventListener('click', () => open(img.getAttribute('src')));
-      });
-      box.querySelector('.lightbox-close').addEventListener('click', close);
-      box.querySelector('.lightbox-arrow.prev').addEventListener('click', () => show(current - 1, true));
-      box.querySelector('.lightbox-arrow.next').addEventListener('click', () => show(current + 1, true));
-      track.addEventListener('click', e => { if (e.target === track || e.target.classList.contains('lightbox-slide')) close(); });
-      document.addEventListener('keydown', e => {
-        if (box.hidden) return;
-        if (e.key === 'Escape') close();
-        if (e.key === 'ArrowLeft') show(current - 1, true);
-        if (e.key === 'ArrowRight') show(current + 1, true);
-      });
-    })();
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-img" src="assets/hero-poster.jpg" alt="habitual dry toilet standing among trees and wildflowers" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner wrap">
+        <p class="kicker kicker-light"><span class="dot"></span><span data-i18n="heroKicker">Waterless sanitation · Designed in Argentina</span></p>
+        <h1 data-i18n="heroTitle">Dignity,<br><em>no pipes</em><br>required.</h1>
+        <p class="hero-sub" data-i18n="heroSub">Flat-packed dry toilets for disaster zones, remote communities and anywhere the sewer doesn't reach. No water. No electricity. Up in under 30 minutes.</p>
+        <div class="hero-ctas">
+          <button class="pill pill-lime pill-lg" type="button" data-stories="0"><span class="play" aria-hidden="true"></span><span data-i18n="heroPhotos">See it in the field</span></button>
+          <a href="#contact" class="pill pill-ghost pill-lg" data-i18n="heroPilot">Request a pilot</a>
+        </div>
+      </div>
+      <div class="ticker" aria-label="Places where habitual units have been installed">
+        <div class="ticker-track">
+          <span>Cerro Champaquí</span><b>✳</b><span>Canelones, Uruguay</span><b>✳</b><span>Valle de Calamuchita</span><b>✳</b><span>Mendiolaza</span><b>✳</b><span>Nueva Córdoba</span><b>✳</b><span>Córdoba</span><b>✳</b>
+          <span aria-hidden="true">Cerro Champaquí</span><b aria-hidden="true">✳</b><span aria-hidden="true">Canelones, Uruguay</span><b aria-hidden="true">✳</b><span aria-hidden="true">Valle de Calamuchita</span><b aria-hidden="true">✳</b><span aria-hidden="true">Mendiolaza</span><b aria-hidden="true">✳</b><span aria-hidden="true">Nueva Córdoba</span><b aria-hidden="true">✳</b><span aria-hidden="true">Córdoba</span><b aria-hidden="true">✳</b>
+        </div>
+      </div>
+    </section>
 
-    const toggle = document.querySelector('.nav-toggle');
-    const menu   = document.querySelector('.navbar .menu');
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-  </script>
+    <!-- NUMBERS -->
+    <section class="numbers" aria-label="habitual in numbers">
+      <div class="wrap numbers-grid">
+        <div class="num"><strong><span data-count="0">0</span><small>L</small></strong><p data-i18n="stat1">of water per use</p></div>
+        <div class="num"><strong><small>&lt;</small><span data-count="30">30</span><small>min</small></strong><p data-i18n="stat2">to assemble a Mini</p></div>
+        <div class="num"><strong><span data-count="10">10</span><small>+</small></strong><p data-i18n="stat3">units in daily use</p></div>
+        <div class="num"><strong><span data-count="2">2</span></strong><p data-i18n="stat4">countries so far</p></div>
+      </div>
+    </section>
 
+    <!-- IDEA -->
+    <section class="idea wrap" id="idea">
+      <div class="idea-grid">
+        <div class="idea-text reveal">
+          <p class="kicker"><span class="dot"></span><span data-i18n="ideaKicker">01 — The idea</span></p>
+          <h2 data-i18n="ideaTitle">When infrastructure fails, <em>people still need a toilet.</em></h2>
+          <p class="lead" data-i18n="ideaLead">Floods, earthquakes, camps, festivals, mountain refuges. Sanitation is often the first thing to break and the last to arrive. habitual brings it with you, in a box.</p>
+        </div>
+        <figure class="idea-visual reveal">
+          <div class="arch"><img src="assets/carousel-7.jpg" alt="A person stepping into a habitual unit" loading="lazy"></div>
+          <span class="sticker" data-i18n="sticker">Field<br>ready<b>✳</b></span>
+        </figure>
+      </div>
+      <div class="pillars reveal">
+        <article><span>/01</span><h3 data-i18n="p1">No sewer.</h3><p data-i18n="p1d">Nothing to dig, connect or pump. It stands on its own wherever you set it down.</p></article>
+        <article><span>/02</span><h3 data-i18n="p2">No water.</h3><p data-i18n="p2d">A urine-diverting seat and a handful of sawdust replace the flush, and the smell.</p></article>
+        <article><span>/03</span><h3 data-i18n="p3">No waste.</h3><p data-i18n="p3d">What goes in becomes compost and fertilizer instead of blackwater.</p></article>
+      </div>
+    </section>
+
+    <!-- FIELD LOG -->
+    <section class="field" id="field">
+      <div class="wrap field-head reveal">
+        <div>
+          <p class="kicker kicker-light"><span class="dot"></span><span data-i18n="fieldKicker">02 — Field log</span></p>
+          <h2 data-i18n="fieldTitle">From mountain camps <em>to city rooftops.</em></h2>
+        </div>
+        <p class="field-lead" data-i18n="fieldLead">Real units, real places, real weather. Swipe through where habitual has already been.</p>
+      </div>
+      <div class="log" id="log" tabindex="0" aria-label="Field log, scroll sideways">
+        <article class="log-card" data-stories="0">
+          <div class="log-img"><img src="assets/field-champaqui-camp.jpg" alt="Two habitual units serving a dome camp among the rocks of Cerro Champaquí" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">31°59′S 64°56′W</span><h3>Cerro Champaquí</h3><p>Córdoba, Argentina</p><q data-i18n="log1">Serving a remote mountain camp.</q></div>
+        </article>
+        <article class="log-card" data-stories="1">
+          <div class="log-img"><img src="assets/field-champaqui-fog.jpg" alt="Two terracotta habitual units in thick mountain fog" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">31°59′S 64°56′W · <span data-i18n="mar24">Mar 2024</span></span><h3>Cerro Champaquí</h3><p>Córdoba, Argentina</p><q data-i18n="log2">Fog, wind, altitude. Still standing.</q></div>
+        </article>
+        <article class="log-card" data-stories="2">
+          <div class="log-img"><img src="assets/field-uruguay.jpg" alt="Black-finish habitual unit among trees in Canelones" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">34°31′S 56°17′W · <span data-i18n="jul23">Jul 2023</span></span><h3>Canelones</h3><p>Uruguay</p><q data-i18n="log3">Black finish, out in the bush.</q></div>
+        </article>
+        <article class="log-card" data-stories="3">
+          <div class="log-img"><img src="assets/field-calamuchita.jpg" alt="habitual Mini next to a wooden cabin on a hillside" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">32°04′S 64°33′W · <span data-i18n="jul23">Jul 2023</span></span><h3>Valle de Calamuchita</h3><p>Córdoba, Argentina</p><q data-i18n="log4">The Mini at an outdoor gathering.</q></div>
+        </article>
+        <article class="log-card" data-stories="4">
+          <div class="log-img"><img src="assets/field-mendiolaza.jpg" alt="habitual unit tucked among the trees of a garden" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">31°16′S 64°18′W · <span data-i18n="mar24">Mar 2024</span></span><h3>Mendiolaza</h3><p>Córdoba, Argentina</p><q data-i18n="log5">A toilet in the garden, for when guests come.</q></div>
+        </article>
+        <article class="log-card" data-stories="5">
+          <div class="log-img"><img src="assets/field-cordoba-rooftop.jpg" alt="habitual unit door on a rooftop terrace among city buildings" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">31°25′S 64°11′W · 2023</span><h3 data-i18n="cordobaCity">Córdoba city</h3><p>Argentina</p><q data-i18n="log6">A rooftop in the middle of the city.</q></div>
+        </article>
+        <article class="log-card" data-stories="6">
+          <div class="log-img"><img src="assets/field-cordoba-night.jpg" alt="habitual unit glowing at dusk among city buildings" loading="lazy"></div>
+          <div class="log-meta"><span class="coord">31°25′S 64°11′W · <span data-i18n="sep23">Sep 2023</span></span><h3>Nueva Córdoba</h3><p>Córdoba, Argentina</p><q data-i18n="log7">Glowing at dusk.</q></div>
+        </article>
+        <div class="log-end">
+          <p data-i18n="logEnd">Your place could be next.</p>
+          <a href="#contact" class="pill pill-lime" data-i18n="logEndCta">Start a pilot</a>
+        </div>
+      </div>
+      <div class="wrap log-controls">
+        <div class="log-bar" aria-hidden="true"><span id="logBar"></span></div>
+        <button class="round" id="logPrev" type="button" aria-label="Previous place">←</button>
+        <button class="round round-lime" id="logNext" type="button" aria-label="Next place">→</button>
+      </div>
+    </section>
+
+    <!-- MODELS -->
+    <section class="models wrap" id="models">
+      <div class="models-head reveal">
+        <p class="kicker"><span class="dot"></span><span data-i18n="modelsKicker">03 — The models</span></p>
+        <h2 data-i18n="modelsTitle">One idea. <em>Two scales.</em></h2>
+      </div>
+      <div class="explorer reveal">
+        <div class="explorer-img">
+          <img id="modelImg" src="assets/carousel-13.jpg" alt="The habitual Mini standing in a garden" loading="lazy">
+          <span class="explorer-tag" id="modelTag" data-i18n="miniTag">Go anywhere. Leave nothing behind.</span>
+        </div>
+        <div class="explorer-info">
+          <div class="tabs" role="tablist" aria-label="Models">
+            <button class="tab active" role="tab" aria-selected="true" data-model="mini"><small>01</small>Mini</button>
+            <button class="tab" role="tab" aria-selected="false" data-model="jardin"><small>02</small>Jardín</button>
+          </div>
+          <div class="model" data-panel="mini">
+            <p class="model-kicker" data-i18n="miniKicker">Rapid deployment</p>
+            <h3>Mini</h3>
+            <p data-i18n="miniDesc">A lightweight, flat-packed dry toilet for disaster relief, humanitarian missions and off-grid camps. One person, no tools, under 30 minutes.</p>
+            <dl class="specs">
+              <div><dt data-i18n="specSetup">Setup</dt><dd>&lt;30 min</dd></div>
+              <div><dt data-i18n="specWeight">Weight</dt><dd>&lt;20 kg</dd></div>
+              <div><dt data-i18n="specShips">Ships</dt><dd data-i18n="flat">Flat</dd></div>
+            </dl>
+            <ul class="checks">
+              <li data-i18n="mini1">Assembles without tools</li>
+              <li data-i18n="mini2">Weatherproof polypropylene arch roof</li>
+              <li data-i18n="mini3">Built for temporary or rotating deployment</li>
+            </ul>
+            <div class="swatches"><span data-i18n="colors">Colors</span><i style="--c:#f1efe8" title="White"></i><i style="--c:#a8432f" title="Terracotta"></i><i style="--c:#4f6a4c" title="Green"></i><i style="--c:#1d1f1e" title="Black"></i></div>
+            <a href="mini.html" class="pill pill-dark" data-i18n="miniCta">Mini in detail</a>
+          </div>
+          <div class="model" data-panel="jardin" hidden>
+            <p class="model-kicker" data-i18n="jardinKicker">Full installation</p>
+            <h3>Jardín</h3>
+            <p data-i18n="jardinDesc">A complete outdoor sanitation structure with an interior handwash basin, galvanized roof and optional solar power. For permanent or semi-permanent sites.</p>
+            <dl class="specs">
+              <div><dt data-i18n="specBuild">Build</dt><dd data-i18n="toOrder">To order</dd></div>
+              <div><dt data-i18n="specPower">Solar</dt><dd data-i18n="solar">Optional</dd></div>
+              <div><dt data-i18n="specSink">Sink</dt><dd data-i18n="included">Included</dd></div>
+            </dl>
+            <ul class="checks">
+              <li data-i18n="jar1">Wood construction, galvanized steel finishes</li>
+              <li data-i18n="jar2">Sealed rear access to the compost chamber</li>
+              <li data-i18n="jar3">Optional solar lighting and USB charging</li>
+            </ul>
+            <a href="#contact" class="pill pill-dark" data-i18n="jardinCta">Request pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILD (scroll-driven) -->
+    <section class="build" id="build">
+      <div class="build-sticky">
+        <div class="wrap build-grid">
+          <div class="build-text">
+            <p class="kicker"><span class="dot"></span><span data-i18n="buildKicker">04 — From flat to finished</span></p>
+            <h2 data-i18n="buildTitle">Six panels. <em>One person.</em></h2>
+            <div class="build-step">
+              <span class="build-num"><b id="buildNum">01</b>/06</span>
+              <h3 id="buildTitle">Lay the base.</h3>
+              <p id="buildText">Everything starts flat. The base panel sets the footprint on almost any ground.</p>
+            </div>
+            <div class="build-dots" id="buildDots" role="tablist" aria-label="Assembly steps"></div>
+          </div>
+          <div class="build-stage" aria-live="polite">
+            <span class="build-water" id="buildWater" aria-hidden="true">01</span>
+            <img src="assets/mini-1.jpg" alt="" data-step="0" class="on">
+            <img src="assets/mini-2.jpg" alt="" data-step="1" loading="lazy">
+            <img src="assets/mini-3.jpg" alt="" data-step="2" loading="lazy">
+            <img src="assets/mini-4.jpg" alt="" data-step="3" loading="lazy">
+            <img src="assets/mini-5.jpg" alt="" data-step="4" loading="lazy">
+            <img src="assets/mini-6.jpg" alt="" data-step="5" loading="lazy">
+          </div>
+        </div>
+        <p class="build-hint" data-i18n="buildHint">Keep scrolling to build it ↓</p>
+      </div>
+    </section>
+
+    <!-- BREATHER -->
+    <section class="breather">
+      <img src="assets/carousel-1.jpg" alt="Loading flat-packed habitual panels onto a pickup truck" loading="lazy">
+      <div class="breather-shade" aria-hidden="true"></div>
+      <div class="wrap breather-inner reveal">
+        <h2 data-i18n="breatherTitle">Fits in a pickup. <em>Works on a mountain.</em></h2>
+        <p data-i18n="breatherSub">If a truck, a boat or a pair of hands can get there, so can habitual.</p>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="use wrap" id="use">
+      <div class="use-head reveal">
+        <p class="kicker"><span class="dot"></span><span data-i18n="useKicker">05 — How it works</span></p>
+        <h2 data-i18n="useTitle">Simpler than <em>a flush.</em></h2>
+      </div>
+      <ol class="use-steps">
+        <li class="reveal"><span class="use-n">1</span><h3 data-i18n="u1">Use it like any toilet.</h3><p data-i18n="u1d">Same seat, same position for everyone. The separator keeps urine and solids apart, so nothing ferments and nothing smells.</p></li>
+        <li class="reveal"><span class="use-n">2</span><h3 data-i18n="u2">Cover with a cup.</h3><p data-i18n="u2d">Add about 250 ml of sawdust, ash, dry soil or rice husks. It absorbs moisture and neutralizes odour.</p><span class="use-tag">250 ml</span></li>
+        <li class="reveal"><span class="use-n">3</span><h3 data-i18n="u3">Seal and rest.</h3><p data-i18n="u3d">When the container is full, close it airtight from the back and let it rest for at least six months.</p><span class="use-tag" data-i18n="u3t">6 months</span></li>
+        <li class="reveal"><span class="use-n">4</span><h3 data-i18n="u4">Back to the earth.</h3><p data-i18n="u4d">After about 24 months in a closed composter it becomes humus for the garden. Diluted urine works as liquid fertilizer.</p><span class="use-tag" data-i18n="u4t">24 months</span></li>
+      </ol>
+    </section>
+
+    <!-- GALLERY WALL -->
+    <section class="wall" id="photos">
+      <div class="wrap wall-head reveal">
+        <div>
+          <p class="kicker kicker-light"><span class="dot"></span><span data-i18n="wallKicker">06 — Photos</span></p>
+          <h2 data-i18n="wallTitle">No renders. <em>Just the real thing.</em></h2>
+        </div>
+        <button class="pill pill-lime pill-lg" type="button" data-stories="0"><span class="play" aria-hidden="true"></span><span data-i18n="wallPlay">Play all photos</span></button>
+      </div>
+      <div class="wrap wall-grid" id="wallGrid"></div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story wrap" id="story">
+      <div class="story-head reveal">
+        <p class="kicker"><span class="dot"></span><span data-i18n="storyKicker">07 — Our story</span></p>
+        <h2 data-i18n="storyTitle">Born in Córdoba. <em>Built for everywhere.</em></h2>
+        <p class="lead" data-i18n="storyLead">Founded by Marcos and Hugo, habitual grew the slow way: prototypes, real customers, and every lesson from the field built back into the next unit.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><span class="year">2021</span><p data-i18n="t1">A simple idea: a sustainable answer to the sanitation gap, starting in Argentina.</p></li>
+        <li class="reveal"><span class="year">2022</span><p data-i18n="t2">The first Jardín prototype is built and sold as a working unit. Field feedback leads to the Mini.</p></li>
+        <li class="reveal"><span class="year">2023</span><p data-i18n="t3">The Mini goes out to events, gardens and rooftops across Córdoba, and crosses into Uruguay.</p></li>
+        <li class="reveal"><span class="year">2024</span><p data-i18n="t4">More than ten units in daily use, up to a mountain camp on Cerro Champaquí. The team moves to Spain and Switzerland.</p></li>
+        <li class="reveal"><span class="year">2025</span><p data-i18n="t5">A new mission: safe sanitation for NGOs and governments in disaster zones, refugee camps and remote communities.</p></li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq wrap" id="faq">
+      <div class="faq-head reveal">
+        <p class="kicker"><span class="dot"></span><span data-i18n="faqKicker">08 — Good questions</span></p>
+        <h2 data-i18n="faqTitle">Curious? <em>Good.</em></h2>
+        <a href="faq.html" class="link-arrow" data-i18n="faqAll">All questions →</a>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary data-i18n="q1">Does it smell?</summary><p data-i18n="a1">No. Odours only appear when urine and solids mix. The separator keeps them apart and the absorbent material handles the rest.</p></details>
+        <details><summary data-i18n="q2">Does it need water or electricity?</summary><p data-i18n="a2">No. It works completely off-grid, with no plumbing, no sewer and no power. The Mini arrives flat-packed and goes up in minutes.</p></details>
+        <details><summary data-i18n="q3">Is it hygienic?</summary><p data-i18n="a3">Yes. You only touch the seat, as with any toilet. The containers are airtight and leak-proof, so they can be moved without spills.</p></details>
+        <details><summary data-i18n="q4">Will I see the waste?</summary><p data-i18n="a4">No. The container is black and light doesn't reach it. Because paper and absorbent go in last, you only ever see the covering material.</p></details>
+        <details><summary data-i18n="q5">Do I need a building permit?</summary><p data-i18n="a5">Usually not for outdoor models: the system produces no leachate or blackwater. It's still worth checking with your local municipality.</p></details>
+        <details><summary data-i18n="q6">How do I order or get pricing?</summary><p data-i18n="a6">Send us a message below or call us. We'll quote based on quantity and delivery location.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-text reveal">
+          <p class="kicker"><span class="dot dot-dark"></span><span data-i18n="contactKicker">Have a place in mind?</span></p>
+          <h2 data-i18n="contactTitle">Let's put dignity <em>on the map.</em></h2>
+          <p class="lead" data-i18n="contactLead">Tell us about the place, the people and the challenge. We reply within 48 hours.</p>
+          <div class="phones">
+            <a href="tel:+41783400383" class="phone"><small>CH</small>+41 78 340 0383</a>
+            <a href="tel:+543517358957" class="phone"><small>AR</small>+54 351 735 8957</a>
+          </div>
+        </div>
+        <form class="form reveal" id="contactForm" action="https://formspree.io/f/meozdykz" method="POST">
+          <input type="hidden" name="_subject" value="Habitual website contact">
+          <label><span data-i18n="fName">Name</span><input name="name" type="text" autocomplete="name" required></label>
+          <label><span data-i18n="fOrg">Organization</span><input name="organization" type="text" autocomplete="organization"></label>
+          <label><span data-i18n="fEmail">Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span data-i18n="fPhone">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
+          <label class="full"><span data-i18n="fMsg">Message</span><textarea name="message" rows="4" required></textarea></label>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <button class="pill pill-dark pill-lg full" type="submit"><span data-i18n="fSend">Send message</span> <span aria-hidden="true">→</span></button>
+          <p class="form-status full" id="formStatus" role="status"></p>
+        </form>
+      </div>
+      <footer class="footer wrap">
+        <a href="#top" class="footer-mark">habitual<span>.</span></a>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="mini.html">Mini</a>
+          <a href="story.html" data-i18n="navStory">Story</a>
+          <a href="faq.html" data-i18n="navFaq">FAQ</a>
+          <a href="contact.html" data-i18n="navContactPage">Contact</a>
+        </nav>
+        <p class="footer-copy">© 2025 habitual · <span data-i18n="footerLine">Designed in Argentina, made for everywhere.</span></p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Sticky phone bar -->
+  <div class="dock" id="dock">
+    <button type="button" data-stories="0"><span class="play" aria-hidden="true"></span><span data-i18n="dockPhotos">Photos</span></button>
+    <a href="#contact" class="dock-lime" data-i18n="dockContact">Contact</a>
+  </div>
+
+  <!-- STORIES (full-screen photo player) -->
+  <div class="stories" id="stories" role="dialog" aria-modal="true" aria-label="Photo stories" hidden>
+    <div class="stories-bars" id="storiesBars"></div>
+    <div class="stories-top">
+      <span class="stories-brand">habitual<span>.</span></span>
+      <span class="stories-count" id="storiesCount"></span>
+      <button class="stories-close" id="storiesClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="stories-stage" id="storiesStage">
+      <img id="storiesBg" alt="" aria-hidden="true">
+      <img id="storiesImg" alt="">
+      <img id="storiesImgNext" alt="" aria-hidden="true">
+    </div>
+    <div class="stories-caption">
+      <span class="stories-place" id="storiesPlace"></span>
+      <p id="storiesText"></p>
+    </div>
+    <button class="stories-nav prev" id="storiesPrev" type="button" aria-label="Previous photo"></button>
+    <button class="stories-nav next" id="storiesNext" type="button" aria-label="Next photo"></button>
+    <p class="stories-hint" id="storiesHint" data-i18n="storiesHint">Tap to advance · hold to pause</p>
+  </div>
+
+  <script src="home.js"></script>
 </body>
 </html>
