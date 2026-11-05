@@ -669,3 +669,38 @@ body { overflow-x: hidden; }
   .place-name { font-size: 0.8rem; color: var(--green); }
   .place-note { font-size: 0.74rem; color: var(--text-muted); opacity: 1; }
 }
+
+/* ===========================
+   Phone usability: bigger tap targets, readable small text
+   =========================== */
+/* Menu button: 44x44 tap area */
+.nav-toggle { padding: 12px 10px; margin-right: -10px; min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
+
+/* Whole FAQ card is tappable, not just the question text */
+.section.faq details { padding: 0; }
+.section.faq summary { padding: 1rem 1.4rem; }
+.section.faq details p { margin: 0; padding: 0 1.4rem 1rem; }
+
+/* Slideshow dots: small circle, larger invisible tap area */
+.slideshow-dot { width: 22px; height: 28px; background: none; position: relative; }
+.slideshow-dot::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%;
+  background: rgba(255,255,255,0.35); transition: transform .2s, background .2s;
+}
+.slideshow-dot.active { background: none; transform: none; }
+.slideshow-dot.active::before { background: #fff; transform: scale(1.3); }
+.slideshow-dots { gap: 0; padding-top: 10px; }
+
+@media (max-width: 768px) {
+  /* Footer links: taller tap areas */
+  .footer-links { gap: 4px 6px; }
+  .footer-links a { display: inline-block; padding: 12px 8px; font-size: 0.92rem; }
+
+  /* Small text: keep at 12px or larger */
+  .brand-tagline, .footer-brand-tagline { font-size: 0.68rem; }
+  .hero-tag { font-size: 0.78rem; }
+  .stat-label { font-size: 0.75rem; }
+  .product-tag { font-size: 0.75rem; }
+  .place-note { font-size: 0.78rem; }
+}
