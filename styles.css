@@ -498,3 +498,47 @@ body { overflow-x: hidden; }
   /* Inner pages */
   .section { padding: 36px 20px; }
 }
+
+/* ===========================
+   Photo galleries
+   =========================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 240px;
+  gap: 14px;
+  margin: 32px 0;
+}
+.gallery-item { margin: 0; position: relative; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); background: #d8e4de; }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+.gallery-four { grid-template-columns: repeat(4, 1fr); }
+.gallery-four .gallery-item img { height: 220px; }
+.diagram { margin: 28px auto 0; max-width: 460px; text-align: center; }
+.diagram img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); background: #fff; }
+.diagram figcaption { margin-top: 8px; font-size: 14px; color: var(--text-muted); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.gallery-item:hover img { transform: scale(1.03); }
+
+/* Captioned galleries: image on top, caption below */
+.gallery-captioned, .gallery-steps { grid-auto-rows: auto; }
+.gallery-captioned .gallery-item, .gallery-steps .gallery-item { display: flex; flex-direction: column; background: #fff; }
+.gallery-captioned .gallery-item img { height: 240px; }
+.gallery-steps .gallery-item img { height: 170px; object-fit: contain; background: #fff; padding: 8px; }
+.gallery-item figcaption { padding: 10px 14px 12px; font-size: 14px; color: var(--text-muted); }
+.gallery-steps figcaption { font-weight: 500; color: var(--text); text-align: center; }
+.gallery-heading { margin-top: 36px; }
+
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+  .gallery-captioned, .gallery-steps { grid-auto-rows: auto; }
+}
+@media (max-width: 560px) {
+  .gallery { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+  .gallery-item.tall { grid-row: span 1; }
+  .gallery-item.wide { grid-column: span 1; }
+  .gallery-four { grid-template-columns: 1fr; }
+  .gallery-captioned, .gallery-steps { grid-auto-rows: auto; }
+  .gallery-steps { grid-template-columns: repeat(2, 1fr); }
+  .gallery-steps .gallery-item img { height: 130px; }
+}
