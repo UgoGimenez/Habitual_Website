@@ -632,3 +632,40 @@ body { overflow-x: hidden; }
   .gallery-all .gallery-item.feature { grid-column: span 2; grid-row: span 1; }
   .gallery-all .gallery-item.feature img { height: 100%; }
 }
+
+/* ===========================
+   Home: real-world locations
+   =========================== */
+.places {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 260px; gap: 14px;
+}
+.place {
+  margin: 0; position: relative; overflow: hidden;
+  border-radius: 14px; background: #d8e4de;
+}
+.place.wide { grid-column: span 2; }
+.place img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: zoom-in; transition: transform .4s ease; }
+.place:hover img { transform: scale(1.03); }
+.place figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 36px 14px 12px; color: #fff; pointer-events: none;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  display: flex; flex-direction: column; gap: 2px;
+}
+.place-name { font-weight: 600; font-size: 0.95rem; }
+.place-name::before { content: '\1F4CD\00A0'; font-size: 0.85em; }
+.place-note { font-size: 0.82rem; opacity: 0.85; line-height: 1.35; }
+
+@media (max-width: 900px) {
+  .places { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+}
+@media (max-width: 560px) {
+  .places { gap: 10px; grid-auto-rows: auto; }
+  .place { border-radius: 10px; background: #fff; border: 1px solid var(--border); display: flex; flex-direction: column; }
+  .place img { height: 46vw; }
+  .place.wide img { height: 56vw; }
+  .place figcaption { position: static; background: none; color: var(--text); padding: 8px 10px 10px; }
+  .place-name { font-size: 0.8rem; color: var(--green); }
+  .place-note { font-size: 0.74rem; color: var(--text-muted); opacity: 1; }
+}
