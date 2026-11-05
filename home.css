@@ -49,6 +49,7 @@ h2 { font-size: clamp(40px, 6.4vw, 96px); line-height: .98; }
   color: #3f7a55; margin-bottom: 22px;
 }
 .kicker-light { color: var(--lime); }
+.hero .kicker { text-shadow: 0 1px 10px rgba(0,0,0,.45); }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 20%, transparent); flex: none; }
 .dot-dark { color: var(--pine); }
 
@@ -431,7 +432,7 @@ body.lock { overflow: hidden; }
   .hero-sub { font-size: 17px; margin-bottom: 26px; }
   .hero-ctas .pill { flex: 1 1 auto; }
   .hero-img { object-position: 64% 50%; }
-  .hero-shade { background: linear-gradient(0deg, rgba(8,28,20,.95) 0%, rgba(8,28,20,.7) 45%, rgba(8,28,20,.15) 80%); }
+  .hero-shade { background: linear-gradient(180deg, rgba(8,28,20,.7) 0%, rgba(8,28,20,0) 22%), linear-gradient(0deg, rgba(8,28,20,.95) 0%, rgba(8,28,20,.72) 50%, rgba(8,28,20,.35) 100%); }
   .ticker { padding: 14px 0; }
   .ticker-track { font-size: 13px; }
 
